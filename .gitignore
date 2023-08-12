@@ -1,0 +1,8 @@
+\#*\#
+*~
+
+*.py[cod]
+
+/domi/pbuf
+/dist
+/.env

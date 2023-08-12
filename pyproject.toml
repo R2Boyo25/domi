@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "domi"
+version = "0.1.0"
+description = "A FastAPI backend for Haven"
+authors = ["Kazani"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.101.0"
+uvicorn = "^0.23.2"
+protobuf = "^4.24.0"
+python-dotenv = "^1.0.0"
+aiohttp = {extras = ["speedups"], version = "^3.8.5"}
+aiodns = "^3.0.0"
+rich = "^13.5.2"
+python-gnupg = "^0.5.1"
+websockets = "^11.0.3"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+pylint = "^2.17.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.build]
+generate-setup-file = false
+script = "build.py"

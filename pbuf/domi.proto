@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message AuthData {
+    string username = 1;
+    bytes public_key = 2;
+}
+
+message AuthenticationRequest {
+    AuthData auth_data = 1;
+}
+
+message RegistrationRequest {
+    AuthData auth_data = 1;
+}
