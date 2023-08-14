@@ -23,8 +23,10 @@ async def root(user_agent: Annotated[str | None, Header()] = None):
 
 @app.websocket("/events")
 async def event_stream(ws: WebSocket):
+    await ws.accept()
+    
     try:
-        if (session := await auth.authenticate_user(ws)) is None:
+        if (session := await auth.handle_user_auth(ws)) is None:
             return
 
     except WebSocketDisconnect:
