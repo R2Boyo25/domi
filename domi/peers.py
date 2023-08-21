@@ -9,13 +9,11 @@ from . import log
 
 
 @asynccontextmanager
-async def lifespan(app: FastAPI):   
+async def lifespan(app: FastAPI):
     app.peer_sessions = aiohttp.ClientSession(
-        headers={
-            "USER-AGENT": "Domi Haven Server"
-        }
+        headers={"USER-AGENT": "Domi Haven Server"}
     )
-    
+
     yield
-    
+
     await app.peer_sessions.close()

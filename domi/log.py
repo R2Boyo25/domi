@@ -3,7 +3,9 @@ import rich.logging
 
 logger = logging.getLogger("domi")
 logger.setLevel(logging.INFO)
-logger.addHandler(rich.logging.RichHandler(omit_repeated_times=False, rich_tracebacks=True))
+logger.addHandler(
+    rich.logging.RichHandler(omit_repeated_times=False, rich_tracebacks=True)
+)
 
 peers = logging.getLogger("domi.peers")
 peers.setLevel(logging.INFO)

@@ -7,7 +7,7 @@ CREATE TABLE users (
 CREATE TABLE sessions (
     user_snowflake BINARY(8),
     session_token BINARY(2048),
-    ip_address,
+    ip_address VARCHAR(40),
     time_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

@@ -6,3 +6,6 @@
 /domi/pbuf
 /dist
 /.env
+
+*.gpg
+test.py
